@@ -3,6 +3,7 @@ import DefaultAvatar from "src/assets/img/png/default-avatar.png";
 export const authConfig = {
   authPage: "/auth/login", // exact page where the user will be redirected if not loggedin
   signupPage: "/auth/signup",
+  oauthPage: "/auth/oauth/:provider",
   liveAppsPortal: process.env.REACT_APP_LIVE_APPS_PORTAL,
   twoFactorAuthenticationPage: "/auth/2fa/send_otp/:email",
   homePage: "/",
