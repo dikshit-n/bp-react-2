@@ -1,10 +1,14 @@
-import { LoginPageContent } from "src/content/auth";
+import {
+  AuthPageContent,
+  // LoginPageContent,
+  OAuthPageContent,
+  SignupPageContent,
+} from "src/content/auth";
 import { authConfig } from "src/config";
 import { Guest } from "src/guard";
+import { AuthLayout } from "src/layouts";
 import { ROUTES_DEFINITION } from "../router";
 import { Helmet } from "react-helmet";
-import { AuthLayout } from "src/layouts";
-import { SignupPageContent } from "src/content/auth";
 
 export const authRoutes: ROUTES_DEFINITION = [
   {
@@ -12,11 +16,11 @@ export const authRoutes: ROUTES_DEFINITION = [
     element: (
       <>
         <Helmet>
-          <title>Login - Ping</title>
+          <title>Auth</title>
         </Helmet>
         <Guest>
           <AuthLayout>
-            <LoginPageContent />
+            <AuthPageContent />
           </AuthLayout>
         </Guest>
       </>
@@ -27,12 +31,25 @@ export const authRoutes: ROUTES_DEFINITION = [
     element: (
       <>
         <Helmet>
-          <title>Signup - Ping</title>
+          <title>Sign up - Auth</title>
         </Helmet>
         <Guest>
           <AuthLayout>
             <SignupPageContent />
           </AuthLayout>
+        </Guest>
+      </>
+    ),
+  },
+  {
+    path: authConfig.oauthPage,
+    element: (
+      <>
+        <Helmet>
+          <title>OAuth - Auth</title>
+        </Helmet>
+        <Guest>
+          <OAuthPageContent />
         </Guest>
       </>
     ),

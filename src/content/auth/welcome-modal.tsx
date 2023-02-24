@@ -1,4 +1,5 @@
-import { EmojiSmileSlight24Regular } from "@fluentui/react-icons";
+import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
+import { useTheme } from "@mui/material";
 import {
   CustomButton,
   // CustomCard,
@@ -6,22 +7,22 @@ import {
   CUSTOM_MODAL_COMPONENT_PROPS,
   XYCenter,
 } from "src/components";
-import { customizedTheme as theme } from "src/theme";
 
 export const WelcomeModal: React.FC<CUSTOM_MODAL_COMPONENT_PROPS> = ({
   onCancel,
   name,
 }) => {
+  const theme = useTheme();
   return (
     <XYCenter style={{ flexDirection: "column" }}>
-      <EmojiSmileSlight24Regular
+      <SentimentSatisfiedAltIcon
         style={{
           fontSize: "20px",
-          color: theme.colors.themeColors.warning,
+          color: theme.colors.warning,
         }}
       />
       <CustomText
-        as="h3"
+        variant="h3"
         style={{ textAlign: "center", padding: "10px", fontSize: "20px" }}
       >
         Welcome, {name}!

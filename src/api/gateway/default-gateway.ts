@@ -8,7 +8,7 @@ import {
   setCookie,
 } from "src/utils";
 import { authApi } from "src/api";
-import { socket } from "src/hooks";
+// import { socket } from "src/hooks";
 
 interface IGateway {
   axiosInstance: AxiosInstance;
@@ -131,15 +131,15 @@ export class Gateway implements IGateway {
   }
 
   updateSocketToken(token) {
-    // socket integration
-    //// update the socket client with the new token
-    socket.io.opts.query = {
-      ...socket.io.opts.query,
-      token,
-    };
-    //// reconnect the socket to use the updated token
-    socket.disconnect();
-    socket.connect();
+    // // socket integration
+    // //// update the socket client with the new token
+    // socket.io.opts.query = {
+    //   ...socket.io.opts.query,
+    //   token,
+    // };
+    // //// reconnect the socket to use the updated token
+    // socket.disconnect();
+    // socket.connect();
   }
 }
 

@@ -4,4 +4,3 @@ export * from "./card-spinner";
 export * from "./error-boundary";
 export * from "./error-ui";
 export * from "./redirect";
-export * from './user-card';

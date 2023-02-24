@@ -54,7 +54,7 @@ function googleAuthentication(): Promise<O_AUTH_DATA> {
         TOKEN_ACCESSOR_FOR_PROVIDER["google"]
       ] as string;
       // if required token is obtained, resolve the promise with the data we have
-      if (!!requiredToken)
+      if (requiredToken)
         resolve({ token: requiredToken, provider: AUTH_PROVIDER.GOOGLE });
       // else start the OAuth to obtain the required token
       else navigateToUrl(`${getProviderUrl(AUTH_PROVIDER.GOOGLE)}`);
@@ -89,8 +89,8 @@ function microsoftAuthentication(): Promise<O_AUTH_DATA> {
       });
     } catch (err) {
       // convert the error message to user readable form before rejecting it
-      err = convertMsalError(err);
-      reject(err);
+      let error = convertMsalError(err);
+      reject(error);
     }
     // clear the session storage to avoid session maintainance error
     sessionStorage.clear();

@@ -154,7 +154,7 @@ export const useAuth = <T>({
     });
   }
 
-  if (!!isOAuth)
+  if (isOAuth)
     return { ...auth, authenticate, initialize, logout, getOAuthUrl } as any;
   return { ...auth, login, initialize, logout } as any;
 };
