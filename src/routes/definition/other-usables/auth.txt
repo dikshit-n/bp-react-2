@@ -31,7 +31,7 @@ export const authRoutes: ROUTES_DEFINITION = [
     element: (
       <>
         <Helmet>
-          <title>Sign up - Nanban</title>
+          <title>Sign up</title>
         </Helmet>
         <Guest>
           <AuthLayout>
@@ -46,7 +46,7 @@ export const authRoutes: ROUTES_DEFINITION = [
     element: (
       <>
         <Helmet>
-          <title>OAuth - Nanban</title>
+          <title>OAuth</title>
         </Helmet>
         <Guest>
           <OAuthPageContent />

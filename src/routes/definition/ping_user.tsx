@@ -1,4 +1,4 @@
-import { rbacConfig } from "src/config";
+import { projectConfig, rbacConfig } from "src/config";
 import { ROUTES_DEFINITION } from "../router";
 import { Helmet } from "react-helmet";
 import { Authenticated } from "src/guard";
@@ -11,7 +11,7 @@ export const pingUserRoutes: ROUTES_DEFINITION = [
     element: (
       <>
         <Helmet>
-          <title>Ping</title>
+          <title>{projectConfig.title}</title>
         </Helmet>
         <Authenticated roles={["ping_user"]}>
           <PingUserLayout>

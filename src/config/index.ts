@@ -22,7 +22,7 @@ export const rbacConfig = {
 };
 
 export const projectConfig = {
-  title: "Ping",
+  title: "Project Title",
   defaultTheme: "pure-light-theme",
   defaultPhonenumberCountry: "IN" as any,
   appBaseurl: window.location.origin,

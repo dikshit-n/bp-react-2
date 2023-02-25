@@ -5,6 +5,7 @@ import { navigationLinks } from "./navigation-links";
 import { Helmet } from "react-helmet";
 import { Authenticated } from "src/guard";
 import { HomePageContent } from "src/content";
+import { projectConfig } from "src/config";
 
 export const routes: ROUTE_DEFINITION[] = [
   {
@@ -12,7 +13,7 @@ export const routes: ROUTE_DEFINITION[] = [
     element: (
       <>
         <Helmet>
-          <title>Ping</title>
+          <title>{projectConfig.title}</title>
         </Helmet>
         <Authenticated>
           <HomePageContent />
@@ -47,7 +48,7 @@ export const routes: ROUTE_DEFINITION[] = [
     element: (
       <>
         <Helmet>
-          <title>Page not found - Nanban</title>
+          <title>Page not found</title>
         </Helmet>
         <PageNotFound />
       </>
@@ -58,7 +59,7 @@ export const routes: ROUTE_DEFINITION[] = [
     element: (
       <>
         <Helmet>
-          <title>Page not found - Nanban</title>
+          <title>Page not found</title>
         </Helmet>
         <PageNotFound />
       </>
