@@ -1,17 +1,10 @@
 import { Actions } from "./actions";
 import { Logo } from "./logo";
-// import { Navbar } from "./navbar";
+import { Navbar } from "./navbar";
 import { NAVIGATION_LINKS } from "src/routes";
-import {
-  CustomIconButton,
-  CustomText,
-  FlexRow,
-  JustifyBetween,
-  YCenter,
-} from "src/components";
-import MenuIcon from "@mui/icons-material/Menu";
+import { CustomText, FlexRow, JustifyBetween, YCenter } from "src/components";
 import { mediaQuery } from "src/theme";
-// import { Sidebar } from "../sidebar";
+import { Sidebar } from "../sidebar";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useTheme, styled } from "@mui/material";
@@ -56,27 +49,17 @@ export interface HEADER_PROPS {
 
 export const Header = ({ navigationLinks = [], actions = null }) => {
   const theme = useTheme();
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [title, setTitle] = useState(document.title);
 
   useEffect(() => {
     setTitle(document.title);
   }, [document.title]);
 
-  const sidebarToggler = (
-    <CustomIconButton
-      style={{ margin: 0, padding: 0 }}
-      onClick={() => setIsSidebarOpen(true)}
-    >
-      <MenuIcon />
-    </CustomIconButton>
-  );
-
   return (
     <>
       <Helmet onChangeClientState={(newState) => setTitle(newState.title)} />
       <StyledMobileHeaderWrapper>
-        {sidebarToggler}
+        <Sidebar navigationLinks={navigationLinks} />
         <CustomText
           variant="h4"
           style={{ fontWeight: "bold", color: theme.colors.white }}
@@ -89,23 +72,16 @@ export const Header = ({ navigationLinks = [], actions = null }) => {
         <Logo />
         <FlexRow style={{ alignItems: "center", gap: 10 }}>
           {actions}
-          {sidebarToggler}
+          <Sidebar navigationLinks={navigationLinks} />
         </FlexRow>
       </StyledTabletHeaderWrapper>
       <StyledDesktopHeaderWrapper>
         <Logo />
         <StyledNavigationWrapper>
-          {/* TODO: implement navbar */}
-          {/* <Navbar navigationLinks={navigationLinks} /> */}
+          <Navbar navigationLinks={navigationLinks} />
           {actions && <Actions>{actions}</Actions>}
         </StyledNavigationWrapper>
       </StyledDesktopHeaderWrapper>
-      {/* TODO: complete sidebar implementation */}
-      {/* <Sidebar
-        handleClose={() => setIsSidebarOpen(false)}
-        isOpen={isSidebarOpen}
-        navigationLinks={navigationLinks}
-      /> */}
     </>
   );
 };

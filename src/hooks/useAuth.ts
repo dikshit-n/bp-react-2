@@ -61,9 +61,11 @@ export const useAuth = <T>({
       try {
         // const data: any = {
         //   name: "Dikshit",
+        //   user_name: "dikshit-n",
+        //   tag: "1234",
         //   email: "dikshit@aveoninfotech.com",
         //   token: "test_token",
-        //   role: "admin",
+        //   role: "ping_user",
         //   _id: "test_id",
         //   image: null,
         // };
@@ -93,9 +95,11 @@ export const useAuth = <T>({
       try {
         // const data: any = {
         //   name: "Dikshit",
+        //   user_name: "dikshit-n",
+        //   tag: "1234",
         //   email: "dikshit@aveoninfotech.com",
         //   token: "test_token",
-        //   role: "admin",
+        //   role: "ping_user",
         //   _id: "test_id",
         //   image: null,
         // };

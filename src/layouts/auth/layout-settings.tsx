@@ -1,6 +1,6 @@
 export const layoutSettings = {
   header: {
-    height: "109px",
+    height: "78px",
   },
   footer: {
     height: "86px",

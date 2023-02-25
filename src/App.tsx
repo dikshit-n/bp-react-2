@@ -29,6 +29,9 @@ import { QueryClientProvider, QueryClient } from "react-query";
 import { CustomModal, ErrorBoundary, FlashMessage } from "src/components";
 import { ReactQueryDevtools } from "react-query/devtools";
 
+// global css
+import "./assets/scss/global.scss";
+
 const clientSideEmotionCache = createEmotionCache();
 
 // react-query setup -- https://react-query.tanstack.com/quick-start

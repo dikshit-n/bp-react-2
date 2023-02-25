@@ -23,6 +23,10 @@ export const PureLightTheme = createTheme({
     bodyBg: "#FFFFFF",
     fontFamily: "'Montserrat', sans-serif",
   },
+  sidebar: {
+    background: themeColors.white,
+    boxShadow: "0 0 5px 0 lightgrey",
+  },
   header: {
     background: "#F6F8FA",
     boxShadow: "none",

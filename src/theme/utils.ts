@@ -66,6 +66,10 @@ declare module "@mui/material/styles" {
       boxShadow: STYLES["color"];
       textColor: STYLES["color"];
     };
+    sidebar: {
+      background: STYLES["color"];
+      boxShadow: string;
+    };
     componentCustomStyles: {
       h1: STYLES;
       h2: STYLES;
@@ -93,6 +97,10 @@ declare module "@mui/material/styles" {
       background: STYLES["color"];
       boxShadow: STYLES["color"];
       textColor: STYLES["color"];
+    };
+    sidebar: {
+      background: STYLES["color"];
+      boxShadow: string;
     };
     componentCustomStyles: {
       h1: STYLES;

@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 const StyledLogoWrapper = styled(Link)`
   img {
-    width: 180px;
-    height: 50px;
+    width: 120px;
+    height: 30px;
   }
   ${mediaQuery.up("sm")} {
     img {
-      width: 225px;
-      height: 65px;
+      width: 120px;
+      height: 30px;
     }
   }
 `;
