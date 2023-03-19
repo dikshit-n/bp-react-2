@@ -122,7 +122,7 @@ export class Gateway implements IGateway {
       !isPublicRoute(window.location.pathname) &&
       !isAuthRoute(window.location.pathname)
     ) {
-      window.location.pathname = authConfig.signupPage;
+      window.location.pathname = authConfig.authPage;
       return;
     }
   }
